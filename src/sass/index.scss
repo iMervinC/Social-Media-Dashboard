@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import './variables/variables.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+}
+
+body {
+  background-color: $WhiteBG;
+}
+
+.App {
+  width: 75vw;
+  margin: 0 auto;
+}
+
+.Sub-Title {
+  font-size: 24px;
+  font-weight: 700;
+  color: $SecondaryText;
+}
+
+@import './components/Platform.scss';
+@import './components/Header.scss';
+@import './components/Switch.scss';

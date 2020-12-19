@@ -1,0 +1,17 @@
+.header {
+  display: flex;
+  height: 135px;
+  justify-content: space-between;
+  align-items: center;
+
+  h1 {
+    width: 100%;
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  p {
+    font-weight: 700;
+    color: $SecondaryText;
+  }
+}

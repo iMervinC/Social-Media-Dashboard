@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import Switch from './components/Switch'
+import Platform from './components/Platform'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="header">
+        <div className="header-sub">
+          <h1>Social Media Dashboard</h1>
+          <p>Total Followers:</p>
+        </div>
+        <Switch />
       </header>
+      <div className="platform-container">
+        <Platform />
+        <Platform />
+        <Platform />
+        <Platform />
+      </div>
+      <h2 className="Sub-Title">Overview - Today</h2>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

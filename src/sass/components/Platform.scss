@@ -1,0 +1,57 @@
+.platform-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.platform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: $CardBGLight;
+  color: $PrimaryText;
+  height: 216px;
+  width: 250px;
+
+  &__handle {
+    display: flex;
+    align-items: center;
+
+    &r {
+      display: inline;
+      color: $SecondaryText;
+      font-weight: 600;
+    }
+  }
+
+  &__followers {
+    text-align: center;
+    margin: 20px 0;
+
+    & h2 {
+      color: $PrimaryText;
+      font-size: 60px;
+      font-weight: 600;
+    }
+
+    & p {
+      color: $SecondaryText;
+      font-weight: 400;
+      letter-spacing: 4px;
+    }
+  }
+
+  &__update {
+    display: flex;
+    align-items: center;
+
+    p {
+      margin-left: 5px;
+      display: inline;
+    }
+  }
+}
