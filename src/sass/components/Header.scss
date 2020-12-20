@@ -33,4 +33,14 @@
     font-weight: 700;
     color: $SecondaryText;
   }
+
+  &.dark {
+    & h1 {
+      color: $PrimaryTextDark;
+    }
+
+    & p {
+      color: $SecondaryTextDark;
+    }
+  }
 }

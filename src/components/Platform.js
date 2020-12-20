@@ -49,9 +49,9 @@ const toK = (num) => {
   return num
 }
 
-const Platform = ({ platform, handle, followers, todayF }) => {
+const Platform = ({ platform, handle, followers, todayF, dark }) => {
   return (
-    <div className="platform" style={topB(platform)}>
+    <div className={`platform ${dark && 'dark'}`} style={topB(platform)}>
       <div className="platform__handle">
         {icons(platform)}
         <p className="platform__handler">{handle}</p>
