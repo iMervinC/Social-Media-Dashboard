@@ -4,10 +4,29 @@
   justify-content: space-between;
   align-items: center;
 
+  @include respond(mobile) {
+    justify-content: center;
+    flex-direction: column;
+    height: 110px;
+    margin: 40px auto;
+  }
+
+  &-sub {
+    @include respond(mobile) {
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      border-bottom: solid 2px #0000003d;
+    }
+  }
+
   h1 {
-    width: 100%;
     font-size: 30px;
     font-weight: 700;
+
+    @include respond(mobile) {
+      width: 90vw;
+      font-size: 28px;
+    }
   }
 
   p {

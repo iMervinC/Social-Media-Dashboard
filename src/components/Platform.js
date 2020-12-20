@@ -1,4 +1,5 @@
 import React from 'react'
+import '../sass/variables/variables.scss'
 
 import { ReactComponent as FacebookIcon } from '../images/icon-facebook.svg'
 import { ReactComponent as InstagramIcon } from '../images/icon-instagram.svg'
@@ -22,20 +23,55 @@ const icons = (icon) => {
   }
 }
 
-const Platform = () => {
+const topB = (icon) => {
+  switch (icon) {
+    case 'facebook':
+      return { borderColor: 'hsl(208, 92%, 53%)' }
+    case 'instagram':
+      return {
+        borderImageSource:
+          'linear-gradient(to left, hsl(37, 97%, 70%), hsl(329, 70%, 58%))',
+      }
+    case 'twitter':
+      return { borderColor: 'hsl(203, 89%, 53%)' }
+    case 'youtube':
+      return { borderColor: 'hsl(348, 97%, 39%)' }
+    default:
+      return 'black'
+  }
+}
+
+const toK = (num) => {
+  if (num > 9999) {
+    let k = num / 1000
+    return `${k}K`
+  }
+  return num
+}
+
+const Platform = ({ platform, handle, followers, todayF }) => {
   return (
-    <div className="platform">
+    <div className="platform" style={topB(platform)}>
       <div className="platform__handle">
-        {icons('twitter')}
-        <p className="platform__handler">@nathanf</p>
+        {icons(platform)}
+        <p className="platform__handler">{handle}</p>
       </div>
       <div className="platform__followers">
-        <h2>1987</h2>
+        <h2>{toK(followers)}</h2>
         <p>FOLLOWERS</p>
       </div>
       <div className="platform__update">
-        <UpIcon />
-        <p>12 Today</p>
+        {todayF > 1 ? (
+          <>
+            <UpIcon />
+            <p style={{ color: 'green' }}>{Math.abs(todayF)} Today</p>
+          </>
+        ) : (
+          <>
+            <DownIcon />
+            <p style={{ color: 'red' }}>{Math.abs(todayF)} Today</p>
+          </>
+        )}
       </div>
     </div>
   )

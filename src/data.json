@@ -1,0 +1,26 @@
+[
+  {
+    "platform": "facebook",
+    "handle": "@nathanf",
+    "followers": 1987,
+    "todayF": 12
+  },
+  {
+    "platform": "twitter",
+    "handle": "@nathanf",
+    "followers": 1044,
+    "todayF": 99
+  },
+  {
+    "platform": "instagram",
+    "handle": "@realnathanf",
+    "followers": 11000,
+    "todayF": 1099
+  },
+  {
+    "platform": "youtube",
+    "handle": "Nathan F.",
+    "followers": 1987,
+    "todayF": -144
+  }
+]

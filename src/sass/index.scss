@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 @import './variables/variables.scss';
+@import './variables/mixins.scss';
 
 * {
   margin: 0;
@@ -16,6 +17,10 @@ body {
 .App {
   width: 75vw;
   margin: 0 auto;
+
+  @include respond(mobile) {
+    width: 90vw;
+  }
 }
 
 .Sub-Title {

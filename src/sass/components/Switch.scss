@@ -1,9 +1,16 @@
 .switch {
   display: flex;
 
+  @include respond(mobile) {
+    width: 100%;
+    align-self: center;
+    justify-content: space-between;
+  }
+
   &-label {
     font-weight: 700;
     color: $SecondaryText;
+    margin-right: 10px;
   }
 
   &-container {

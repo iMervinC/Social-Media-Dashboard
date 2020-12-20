@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { Theme } from '../App'
 
-const Switch = () => {
+const Switch = ({ dark }) => {
+  const theme = useContext(Theme)
+
   return (
     <div className="switch">
-      <p className="switch-lable">Dark Mode</p>
-      <label classname="switch-container">
-        <input type="checkbox" />
+      <p className="switch-label">Dark Mode</p>
+      <label className="switch-container">
+        <input type="checkbox" onChange={() => theme(!dark)} />
         <span className="switch-slider"></span>
       </label>
     </div>
