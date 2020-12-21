@@ -53,6 +53,7 @@
       width: 75%;
       margin-bottom: 30px;
       color: $SecondaryText;
+      font-weight: 700;
     }
 
     &--bot {
@@ -68,7 +69,8 @@
       }
 
       p {
-        font-weight: 400;
+        font-size: 12px;
+        font-weight: 700;
         margin-left: 3px;
       }
 
@@ -116,14 +118,15 @@
     &r {
       display: inline;
       color: $SecondaryText;
-      font-weight: 600;
+      font-weight: 700;
+      font-size: 12px;
       margin-left: 5px;
     }
   }
 
   &__followers {
     text-align: center;
-    margin: 20px 0;
+    margin: 10px 0 20px 0;
 
     & h2 {
       color: $PrimaryText;
@@ -143,8 +146,10 @@
     align-items: center;
 
     p {
+      font-size: 12px;
+      font-weight: 700;
       margin-left: 5px;
-      display: inline;
+      //display: inline;
     }
   }
 }

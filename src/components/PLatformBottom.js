@@ -23,8 +23,8 @@ const icons = (icon) => {
 
 const toK = (num) => {
   if (num > 9999) {
-    let k = num / 1000
-    return `${k}K`
+    let k = Math.floor(num / 1000)
+    return `${k}k`
   }
   return num
 }
@@ -41,7 +41,13 @@ const PLatformBottom = ({ dark, title, icon, count, perct }) => {
         <div className={`platform__bottom--bot__percent ${dark && 'dark'}`}>
           {perct > 1 ? <UpIcon /> : <DownIcon />}
 
-          <p style={perct > 1 ? { color: 'green' } : { color: 'red' }}>
+          <p
+            style={
+              perct > 1
+                ? { color: 'hsl(163, 72%, 41%)' }
+                : { color: 'hsl(356, 69%, 56%)' }
+            }
+          >
             {Math.abs(perct)}%
           </p>
         </div>

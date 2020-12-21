@@ -43,8 +43,8 @@ const topB = (icon) => {
 
 const toK = (num) => {
   if (num > 9999) {
-    let k = num / 1000
-    return `${k}K`
+    let k = Math.floor(num / 1000)
+    return `${k}k`
   }
   return num
 }
@@ -65,12 +65,16 @@ const Platform = ({ platform, handle, followers, todayF, dark }) => {
         {todayF > 1 ? (
           <>
             <UpIcon />
-            <p style={{ color: 'green' }}>{Math.abs(todayF)} Today</p>
+            <p style={{ color: 'hsl(163, 72%, 41%)' }}>
+              {Math.abs(todayF)} Today
+            </p>
           </>
         ) : (
           <>
             <DownIcon />
-            <p style={{ color: 'red' }}>{Math.abs(todayF)} Today</p>
+            <p style={{ color: 'hsl(356, 69%, 56%)' }}>
+              {Math.abs(todayF)} Today
+            </p>
           </>
         )}
       </div>
