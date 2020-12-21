@@ -26,16 +26,16 @@ const icons = (icon) => {
 const topB = (icon) => {
   switch (icon) {
     case 'facebook':
-      return { borderColor: 'hsl(208, 92%, 53%)' }
+      return { background: 'hsl(208, 92%, 53%)' }
     case 'instagram':
       return {
-        borderImageSource:
+        background:
           'linear-gradient(to left, hsl(37, 97%, 70%), hsl(329, 70%, 58%))',
       }
     case 'twitter':
-      return { borderColor: 'hsl(203, 89%, 53%)' }
+      return { background: 'hsl(203, 89%, 53%)' }
     case 'youtube':
-      return { borderColor: 'hsl(348, 97%, 39%)' }
+      return { background: 'hsl(348, 97%, 39%)' }
     default:
       return 'black'
   }
@@ -51,7 +51,8 @@ const toK = (num) => {
 
 const Platform = ({ platform, handle, followers, todayF, dark }) => {
   return (
-    <div className={`platform ${dark && 'dark'}`} style={topB(platform)}>
+    <div className={`platform ${dark && 'dark'}`}>
+      <span className="platform__border" style={topB(platform)}></span>
       <div className="platform__handle">
         {icons(platform)}
         <p className="platform__handler">{handle}</p>

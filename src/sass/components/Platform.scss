@@ -26,17 +26,21 @@
   height: 216px;
   width: 250px;
   cursor: pointer;
-  border-image-slice: 1;
-  border-top: solid 5px;
-  border-bottom: none;
-  border-left: none;
-  border-right: none;
   margin-bottom: 20px;
+  position: relative;
   transition: all 300ms;
+
+  &__border {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    transform: translateY(-106px);
+    border-radius: 5px 5px 0 0;
+    background: white;
+  }
 
   &__bottom {
     border-radius: 5px;
-    border-top: none;
     height: 125px;
 
     &:nth-child(4n) {
@@ -49,10 +53,6 @@
       width: 75%;
       margin-bottom: 30px;
       color: $SecondaryText;
-
-      &.dark {
-        color: red;
-      }
     }
 
     &--bot {
