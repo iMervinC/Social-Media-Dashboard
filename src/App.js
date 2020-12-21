@@ -23,6 +23,7 @@ function App() {
 
   return (
     <Theme.Provider value={setDark}>
+      <div className={`backdrop ${dark && 'dark'}`}></div>
       <div className="App dark">
         <header className={`header ${dark && 'dark'}`}>
           <div className="header-sub">

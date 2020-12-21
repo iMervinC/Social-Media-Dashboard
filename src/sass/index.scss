@@ -10,6 +10,20 @@
   font-size: 14px;
 }
 
+.backdrop {
+  position: absolute;
+  width: 100%;
+  height: 250px;
+  background-color: $WhiteGBTop;
+  z-index: -1;
+  border-radius: 0 0 20px 20px;
+  top: 0;
+
+  &.dark {
+    background-color: $DarkBGTop;
+  }
+}
+
 .App {
   width: 1110px;
   margin: 0 auto;
