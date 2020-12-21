@@ -1,33 +1,8 @@
 import React from 'react'
-import { ReactComponent as FacebookIcon } from '../images/icon-facebook.svg'
-import { ReactComponent as InstagramIcon } from '../images/icon-instagram.svg'
-import { ReactComponent as TwitterIcon } from '../images/icon-twitter.svg'
-import { ReactComponent as YoutubeIcon } from '../images/icon-youtube.svg'
+import { icons, toK } from '../helper/helperFunc'
+
 import { ReactComponent as UpIcon } from '../images/icon-up.svg'
 import { ReactComponent as DownIcon } from '../images/icon-down.svg'
-
-const icons = (icon) => {
-  switch (icon) {
-    case 'facebook':
-      return <FacebookIcon className="platform__icon" />
-    case 'instagram':
-      return <InstagramIcon className="platform__icon" />
-    case 'twitter':
-      return <TwitterIcon className="platform__icon" />
-    case 'youtube':
-      return <YoutubeIcon className="platform__icon" />
-    default:
-      return <FacebookIcon className="platform__icon" />
-  }
-}
-
-const toK = (num) => {
-  if (num > 9999) {
-    let k = Math.floor(num / 1000)
-    return `${k}k`
-  }
-  return num
-}
 
 const PLatformBottom = ({ dark, title, icon, count, perct }) => {
   return (
