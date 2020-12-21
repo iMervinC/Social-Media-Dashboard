@@ -22,7 +22,12 @@
 .Sub-Title {
   font-size: 24px;
   font-weight: 700;
-  color: $SecondaryText;
+  color: $PrimaryText;
+  margin-bottom: 30px;
+
+  &.dark {
+    color: $PrimaryTextDark;
+  }
 }
 
 @import './components/Platform.scss';

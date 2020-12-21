@@ -1,0 +1,50 @@
+[
+  {
+    "title":"Page Views",
+    "icon":"facebook",
+    "count":87,
+    "perct":3
+  },
+  {
+    "title":"Likes",
+    "icon":"facebook",
+    "count":52,
+    "perct":-2
+  },
+  {
+    "title":"Likes",
+    "icon":"instagram",
+    "count":5462,
+    "perct":2257
+  },
+  {
+    "title":"Profile Views",
+    "icon":"instagram",
+    "count":52000,
+    "perct":1375
+  },
+  {
+    "title":"Retweets",
+    "icon":"twitter",
+    "count":117,
+    "perct":303
+  },
+  {
+    "title":"Likes",
+    "icon":"twitter",
+    "count":507,
+    "perct":553
+  },
+  {
+    "title":"Likes",
+    "icon":"youtube",
+    "count":107,
+    "perct":-19
+  },
+  {
+    "title":"Total Views",
+    "icon":"youtube",
+    "count":1407,
+    "perct":-12
+  }
+]

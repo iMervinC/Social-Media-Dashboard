@@ -8,7 +8,7 @@ const Switch = ({ dark }) => {
     <div className="switch">
       <p className="switch-label">Dark Mode</p>
       <input type="checkbox" id="switch" onChange={() => theme(!dark)} />
-      <label for="switch">Toggle</label>
+      <label htmlFor="switch">Toggle</label>
     </div>
   )
 }

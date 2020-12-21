@@ -3,10 +3,15 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-bottom: 50px;
 
   @include respond(mobile) {
     justify-content: center;
     width: 90vw;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -29,6 +34,57 @@
   margin-bottom: 20px;
   transition: all 300ms;
 
+  &__bottom {
+    border-radius: 5px;
+    border-top: none;
+    height: 125px;
+    margin-right: 20px;
+
+    &:nth-child(4n) {
+      margin-right: 0px;
+    }
+
+    &--top {
+      display: flex;
+      justify-content: space-between;
+      width: 75%;
+      margin-bottom: 30px;
+      color: $SecondaryText;
+
+      &.dark {
+        color: red;
+      }
+    }
+
+    &--bot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 75%;
+
+      &.dark {
+        h3 {
+          color: $PrimaryTextDark;
+        }
+      }
+
+      p {
+        font-weight: 400;
+        margin-left: 3px;
+      }
+
+      h3 {
+        font-size: 30px;
+      }
+
+      &__percent {
+        display: flex;
+        align-items: center;
+        align-self: flex-end;
+      }
+    }
+  }
+
   &.dark {
     background-color: $CardBGDark;
 
@@ -41,12 +97,13 @@
     }
 
     &:hover {
-      filter: brightness(110%);
+      filter: brightness(150%);
     }
   }
 
   @include respond(mobile) {
     width: 100%;
+    margin-right: 0;
   }
 
   &:hover {
